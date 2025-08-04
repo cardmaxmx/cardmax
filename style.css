@@ -274,7 +274,7 @@ body {
 
 /* Primary button special styling */
 .link-button.primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
     border: 1px solid var(--primary-color);
 }
