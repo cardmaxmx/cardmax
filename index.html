@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardMax - Enlaces Oficiales</title>
+    <meta name="description" content="Todos los enlaces oficiales de CardMax en un solo lugar">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="profile-header">
+            <div class="profile-image">
+                <img src="CardMax.png" alt="CardMax Logo" class="logo">
+            </div>
+            <h1 class="profile-name">CardMax</h1>
+            <p class="profile-bio">Tarjetas de Presentación Digitales | Conecta Digitalmente | Soluciones Innovadoras</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cardmaxmx" target="_blank" rel="noopener" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@cardmaxmx" target="_blank" rel="noopener" class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/526643053834" target="_blank" rel="noopener" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Links Section -->
+        <main class="links-container">
+            <a href="https://cardmax.com.mx" target="_blank" rel="noopener" class="link-button primary">
+                <div class="link-content">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="link-text">
+                        <span class="link-title">Sitio Web Oficial</span>
+                        <span class="link-subtitle">Conoce todos nuestros servicios</span>
+                    </div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <a href="https://wa.me/526643053834?text=Hola%20CardMax,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="link-button whatsapp-button">
+                <div class="link-content">
+                    <div class="link-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="link-text">
+                        <span class="link-title">Contacto WhatsApp</span>
+                        <span class="link-subtitle">+52 664 305 3834</span>
+                    </div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/cardmaxmx" target="_blank" rel="noopener" class="link-button instagram-button">
+                <div class="link-content">
+                    <div class="link-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="link-text">
+                        <span class="link-title">Síguenos en Instagram</span>
+                        <span class="link-subtitle">@cardmaxmx</span>
+                    </div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@cardmaxmx" target="_blank" rel="noopener" class="link-button tiktok-button">
+                <div class="link-content">
+                    <div class="link-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="link-text">
+                        <span class="link-title">Síguenos en TikTok</span>
+                        <span class="link-subtitle">@cardmaxmx</span>
+                    </div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <a href="mailto:cardmaxmx@gmail.com" class="link-button">
+                <div class="link-content">
+                    <div class="link-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="link-text">
+                        <span class="link-title">Correo Electrónico</span>
+                        <span class="link-subtitle">cardmaxmx@gmail.com</span>
+                    </div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 CardMax. Todos los derechos reservados.</p>
+            <p class="footer-subtitle">Tarjetas de Presentación Digitales</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Add click animation to buttons
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Add smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Analytics tracking (optional)
+        function trackClick(linkName) {
+            console.log(`Clicked: ${linkName}`);
+            // Aquí puedes agregar código de Google Analytics o similar
+        }
+    </script>
+</body>
+</html>

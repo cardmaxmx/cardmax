@@ -1,0 +1,581 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* CardMax corporate color palette */
+    --primary-color: #E11D48;          /* CardMax red */
+    --secondary-color: #1F1F1F;        /* Dark gray */
+    --accent-color: #F9B342;           /* Yellow accent */
+    --success-color: #27ae60;          /* Green for success states */
+    --warning-color: #F9B342;          /* CardMax yellow for warnings */
+    --danger-color: #E11D48;           /* CardMax red for errors */
+    
+    /* CardMax color scheme */
+    --text-primary: #1F1F1F;
+    --text-secondary: #5d6d7e;
+    --text-light: #85929e;
+    --background-primary: #ffffff;
+    --background-secondary: #f8f9fb;
+    --background-accent: #ecf0f1;
+    --background-dark: #1F1F1F;
+    
+    /* Social media colors */
+    --instagram-color: #E1306C;
+    --linkedin-color: #0077B5;
+    --whatsapp-color: #25D366;
+    --tiktok-color: #000000;
+    
+    /* Corporate shadows and effects */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.20);
+    
+    /* Professional border radius */
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    
+    /* Smooth transitions */
+    --transition-fast: 0.15s ease;
+    --transition-medium: 0.25s ease;
+    --transition-slow: 0.4s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fb 50%, #fef7f0 100%);
+    min-height: 100vh;
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Header Styles */
+.profile-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 40px 24px;
+    background: var(--background-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.profile-image {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--border-radius-md);
+    object-fit: contain;
+    background: var(--background-secondary);
+    padding: 8px;
+    border: 2px solid var(--background-accent);
+    box-shadow: var(--shadow-subtle);
+    transition: transform var(--transition-medium);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.profile-bio {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.4;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    transition: all var(--transition-medium);
+    box-shadow: var(--shadow-light);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.linkedin {
+    background: var(--linkedin-color);
+}
+
+.social-icon.whatsapp {
+    background: var(--whatsapp-color);
+}
+
+.social-icon.tiktok {
+    background: var(--tiktok-color);
+}
+
+/* Links Container */
+.links-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Link Button Styles */
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: var(--background-primary);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-subtle);
+    transition: all var(--transition-medium);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left var(--transition-slow);
+}
+
+.link-button:hover::before {
+    left: 100%;
+}
+
+.link-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-light);
+    border-color: var(--accent-color);
+}
+
+.link-button:active {
+    transform: translateY(0);
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.link-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--background-secondary);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: all var(--transition-medium);
+}
+
+.link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.link-title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.link-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.link-arrow {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: all var(--transition-medium);
+}
+
+.link-button:hover .link-arrow {
+    color: var(--accent-color);
+    transform: translateX(3px);
+}
+
+/* Primary button special styling */
+.link-button.primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.link-button.primary .link-title,
+.link-button.primary .link-subtitle {
+    color: white;
+}
+
+.link-button.primary .link-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.link-button.primary .link-arrow {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.link-button.primary:hover .link-arrow {
+    color: white;
+}
+
+/* Social media specific buttons - Default colors ONLY for icons */
+.link-button.whatsapp-button .link-icon {
+    background: var(--whatsapp-color);
+    color: white;
+}
+
+.link-button.instagram-button .link-icon {
+    background: var(--instagram-color);
+    color: white;
+}
+
+.link-button.linkedin-button .link-icon {
+    background: var(--linkedin-color);
+    color: white;
+}
+
+.link-button.tiktok-button .link-icon {
+    background: var(--tiktok-color);
+    color: white;
+}
+
+/* Hover effects - Enhanced colors */
+.link-button.whatsapp-button:hover {
+    background: rgba(37, 211, 102, 0.05);
+    transform: translateY(-1px);
+}
+
+.link-button.instagram-button:hover {
+    background: rgba(225, 48, 108, 0.05);
+    transform: translateY(-1px);
+}
+
+.link-button.linkedin-button:hover {
+    background: rgba(0, 119, 181, 0.05);
+    transform: translateY(-1px);
+}
+
+.link-button.tiktok-button:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+/* Phone and Email buttons with default colors ONLY for icons */
+.link-button:has(.fa-phone) .link-icon {
+    background: #16a085;
+    color: white;
+}
+
+.link-button:has(.fa-phone):hover {
+    background: rgba(22, 160, 133, 0.05);
+    transform: translateY(-1px);
+}
+
+.link-button:has(.fa-envelope) .link-icon {
+    background: var(--primary-color);
+    color: white;
+}
+
+.link-button:has(.fa-envelope):hover {
+    background: rgba(225, 29, 72, 0.05);
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 16px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.footer-subtitle {
+    margin-top: 4px;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .container {
+        max-width: 520px;
+        padding: 32px;
+    }
+    
+    .profile-header {
+        padding: 36px 28px;
+        margin-bottom: 36px;
+    }
+    
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .profile-name {
+        font-size: 2rem;
+    }
+    
+    .profile-bio {
+        font-size: 1rem;
+        max-width: 360px;
+    }
+    
+    .social-icons {
+        gap: 16px;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+    
+    .links-container {
+        gap: 14px;
+    }
+    
+    .link-button {
+        padding: 20px 24px;
+    }
+    
+    .link-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+    
+    .link-title {
+        font-size: 1rem;
+    }
+    
+    .link-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 50%, #e8edf3 100%);
+        background-attachment: fixed;
+    }
+    
+    .container {
+        max-width: 460px;
+        padding: 40px;
+    }
+    
+    .link-button:hover {
+        transform: translateY(-2px);
+    }
+    
+    .link-button:hover .link-icon {
+        transform: scale(1.05);
+    }
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .profile-header {
+        padding: 24px 16px;
+        margin-bottom: 24px;
+    }
+    
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .profile-name {
+        font-size: 1.6rem;
+    }
+    
+    .profile-bio {
+        font-size: 0.85rem;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .link-button {
+        padding: 16px 18px;
+    }
+    
+    .link-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .link-title {
+        font-size: 0.9rem;
+    }
+    
+    .link-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Page load animations */
+.profile-header {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.link-button {
+    animation: fadeInUp 0.4s ease-out;
+    animation-fill-mode: both;
+}
+
+.link-button:nth-child(1) { animation-delay: 0.05s; }
+.link-button:nth-child(2) { animation-delay: 0.1s; }
+.link-button:nth-child(3) { animation-delay: 0.15s; }
+.link-button:nth-child(4) { animation-delay: 0.2s; }
+.link-button:nth-child(5) { animation-delay: 0.25s; }
+.link-button:nth-child(6) { animation-delay: 0.3s; }
+
+/* Focus styles for accessibility */
+.link-button:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.social-icon:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        max-width: none;
+    }
+    
+    .link-button {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
